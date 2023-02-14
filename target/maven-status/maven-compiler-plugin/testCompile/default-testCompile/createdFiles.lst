@@ -1,0 +1,4 @@
+com\qa\tests\GetTests.class
+com\qa\tests\PostCalls.class
+com\qa\tests\BaseTest.class
+com\qa\tests\DPTest.class

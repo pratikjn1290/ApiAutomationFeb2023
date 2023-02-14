@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="2" total="5" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="2080" started-at="2023-02-12T12:36:18 IST" finished-at="2023-02-12T12:36:20 IST">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="2080" started-at="2023-02-12T12:36:18 IST" finished-at="2023-02-12T12:36:20 IST">
+      <class name="com.qa.tests.BaseTest">
+        <test-method status="PASS" signature="setupReport()[pri:0, instance:com.qa.tests.BaseTest@64729b1e]" name="setupReport" is-config="true" duration-ms="205" started-at="2023-02-12T12:36:18 IST" finished-at="2023-02-12T12:36:18 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupReport -->
+        <test-method status="PASS" signature="tearDownReport()[pri:0, instance:com.qa.tests.BaseTest@64729b1e]" name="tearDownReport" is-config="true" duration-ms="194" started-at="2023-02-12T12:36:20 IST" finished-at="2023-02-12T12:36:20 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownReport -->
+      </class> <!-- com.qa.tests.BaseTest -->
+      <class name="com.qa.tests.DPTest">
+        <test-method status="PASS" signature="DataProviderTest(java.lang.String,java.lang.String)[pri:0, instance:com.qa.tests.DPTest@74650e52]" name="DataProviderTest" duration-ms="16" started-at="2023-02-12T12:36:18 IST" data-provider="getData" finished-at="2023-02-12T12:36:18 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[qa]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DataProviderTest -->
+        <test-method status="PASS" signature="DataProviderTest(java.lang.String,java.lang.String)[pri:0, instance:com.qa.tests.DPTest@74650e52]" name="DataProviderTest" duration-ms="0" started-at="2023-02-12T12:36:18 IST" data-provider="getData" finished-at="2023-02-12T12:36:18 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[qaaa]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[test2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DataProviderTest -->
+      </class> <!-- com.qa.tests.DPTest -->
+      <class name="com.qa.tests.GetTests">
+        <test-method status="PASS" signature="setupReportMethod(java.lang.reflect.Method)[pri:0, instance:com.qa.tests.GetTests@15d0c81b]" name="setupReportMethod" is-config="true" duration-ms="16" started-at="2023-02-12T12:36:18 IST" finished-at="2023-02-12T12:36:18 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.qa.tests.GetTests.getEmployeeDetails()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupReportMethod -->
+        <test-method status="PASS" signature="getEmployeeDetails()[pri:0, instance:com.qa.tests.GetTests@15d0c81b]" name="getEmployeeDetails" duration-ms="2017" started-at="2023-02-12T12:36:18 IST" finished-at="2023-02-12T12:36:20 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getEmployeeDetails -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.qa.tests.GetTests@15d0c81b]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-02-12T12:36:20 IST" finished-at="2023-02-12T12:36:20 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=getEmployeeDetails status=SUCCESS method=GetTests.getEmployeeDetails()[pri:0, instance:com.qa.tests.GetTests@15d0c81b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.tests.GetTests -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

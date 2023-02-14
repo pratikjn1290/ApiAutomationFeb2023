@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="com.qa.listeners.TestListeners"/>
+    </listeners>
+
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Pratik.Jain/Desktop/Documents/VerifyAutomation/ApiAutomationFramework">
+        <classes>
+            <class name="com.qa.tests.DPTest">
+                <methods>
+                    <include name="DataProviderTest"/>
+                </methods>
+            </class>
+            <class name="com.qa.tests.GetTests">
+                <methods>
+                    <include name="getEmployeeDetails"/>
+                </methods>
+            </class>
+            <class name="com.qa.tests.PostCalls">
+                <methods>
+                    <include name="postCallTest"/>
+                    <include name="postCallWithExternalFile"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
