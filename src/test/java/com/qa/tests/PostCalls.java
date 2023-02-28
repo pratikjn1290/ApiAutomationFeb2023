@@ -13,12 +13,13 @@ import com.qa.utility.FrameworkConstants;
 import com.qa.utility.RandomUtils;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.File;
 
-public class PostCalls extends  BaseTest{
+public class PostCalls extends BaseTest {
 
     @Test
     @FrameworkAnnotation(author = "Pratik", category = "Smoke")
@@ -27,8 +28,9 @@ public class PostCalls extends  BaseTest{
                 city(RandomUtils.getCity()).id(RandomUtils.getId()).
                 fName(RandomUtils.getFirstName()).
                 lName(RandomUtils.getLastName()).build();
-        Response res = ApiBuilders.postAPIRequestBuilder().
-                contentType(ContentType.JSON).body(emp).post("/employees");
+        RequestSpecification requestSpecification = ApiBuilders.postAPIRequestBuilder().body(emp);
+        Response res = requestSpecification.contentType(ContentType.JSON).post("/employees");
+        ExtentLogger.logRequest(requestSpecification);
         ExtentLogger.logResponse(res.asPrettyString());
         System.out.println(res.prettyPrint());
         Assert.assertEquals(res.getStatusCode(), 201);
@@ -40,12 +42,10 @@ public class PostCalls extends  BaseTest{
         String req = FileUtils.readJsonAndReturnString(FrameworkConstants.REQUEST_FOLDER_PATH).
                 replace("Firstname", RandomUtils.getFirstName())
                 .replace("id", String.valueOf(RandomUtils.getId()));
-
         Response res = ApiBuilders.postAPIRequestBuilder().body(req).post("/employees");
         res.prettyPrint();
         ExtentLogger.logResponse(res.asPrettyString());
         FileUtils.storeJsonResponseInFile(FrameworkConstants.RESPONSE_FOLDER_PATH, res);
         Assert.assertEquals(res.getStatusCode(), 201);
     }
-
 }
